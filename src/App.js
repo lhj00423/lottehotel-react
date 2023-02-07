@@ -1,23 +1,42 @@
-import logo from './logo.svg';
+//import { useReducer } from 'react';
 import './App.css';
+//import InputSample from './components/InputSample';
+//import Lists from './components/Lists';
+import Members from './components/Members';
+//import TextSample from './components/TextSample';
+//import useLists from './hooks/useLists';
+
+// function reducer(state,action){ 
+//   let newList; 
+//   switch(action.type){
+//     case "ADDLIST":
+//       return [
+//         ...state,
+//         action.list
+//       ];
+//     case "DELLIST": 
+//       newList = state.filter((li,index) => index !== action.delindex)
+//       return newList;
+//     case "ToggleLIST":
+//       newList = state.map((li,index)=>index === action.toggleIndex ? {
+//         ...li,
+//         isToggle: !li.isToggle
+//       }: li)
+//       return newList;    
+//     default:
+//       return state;
+//   }
+// }
 
 function App() {
-  return (
+  //const [state,addLists, delList,toggleList] = useLists()
+  return ( 
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Members/>
+     {/* <InputSample title = "props" addLists={addLists}>
+      <TextSample/>
+     </InputSample>
+     <Lists lists={state} delList={delList} toggleList={toggleList}/> */}
     </div>
   );
 }
